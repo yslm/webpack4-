@@ -1,0 +1,166 @@
+body {
+    width:100%;
+    -webkit-overflow-scrolling: touch;
+    //background-color: #000;
+    background:#ffffff;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    text-align: center;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.44rem;
+        .content-top{
+            width:100%;
+            height: 1.85rem;
+            background:url("../img/taskbg.jpg")  no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .title{
+                width:100%;
+                font-size: 0.32rem;
+                color: #fff;
+                height:0.42rem;
+                margin-bottom: 0.1rem;
+            }
+            .text{
+                line-height: 0.2rem;
+                width: 2.85rem;
+                text-align: right;
+                font-size:0.14rem;
+                color:#F6FDFF;
+                padding-right: 0.2rem;
+              .lt{
+                  font-size:0.13rem;
+              }
+            }
+        }
+        .content-bottom{
+            width:100%;
+            padding: 0 0.13rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .name{
+                width: 100%;
+                height: 0.38rem;
+                line-height: 0.48rem;
+                color:#2C2C30;
+                font-size:0.2rem;
+                font-weight:bold;
+                text-align: right;
+                padding: 0 0.13rem;
+            }
+            .table-wrap{
+                width:100%;
+                padding: 0 0.13rem;
+                margin-bottom: 0.32rem;
+                table{
+                    width:100%;
+                    border-collapse: collapse;//折叠边框
+                    border:solid 1px #e0f5ff;
+                    th{
+                        width: 50%;
+                        height:0.35rem;
+                        line-height: 0.35rem;
+                        background:#1FB8F9;
+                        color:#fff;
+                        font-size: 0.16rem;
+                        text-align: center;
+                        border:solid 1px #e0f5ff;
+                    }
+                    td{
+                        width: 50%;
+                        height:0.4rem;
+                        border:solid 1px #e0f5ff;
+                        text-align: center;
+
+                        color: #2C2C30;
+                        font-size: 0.15rem;
+                        &:first-child{
+                            width: 0.68rem;
+                            padding: 0 0.09rem;
+                            box-sizing: padding-box;
+                        }
+                        &:nth-child(2){
+                            padding: 0 0.09rem;
+                        }
+                        &:nth-child(3){
+                            width: 0.48rem;
+                            font-size:0.14rem;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-wrap{
+            width: 100%;
+            button{
+                width: 1.12rem;
+                height: 0.3rem;
+                background:url("../img/topUp.png") no-repeat;
+                -webkit-background-size: 100%;
+                background-size: 100%;
+            }
+        }
+    }
+
+    .modal{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 43, 58, 0.5);
+        z-index: 100;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*padding-top: 2rem;*/
+        //padding-left: 0.2rem;
+        //padding-right: 0.2rem;
+        .end{
+            position: relative;
+            width: 2.7rem;
+            height:3.2rem;
+            background: url("../img/end1.png") no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            .ok-btn{
+                position: absolute;
+                width: 1.9rem;
+                height: 0.4rem;
+                bottom: 0.2rem;
+                left: 50%;
+                margin-left:-0.95rem;
+                border-radius: 0.2rem;
+                background-color: #EC2C7A;
+                color: #fff;
+                font-weight:bold;
+                font-size:0.14rem;
+
+            }
+        }
+
+
+
+    }
+
+}
+

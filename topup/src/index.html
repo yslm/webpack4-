@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no ,viewport-fit=cover" name="viewport">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Top Up event</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="content-top">
+        <div class="title">
+            عرض الشحن
+        </div>
+        <div class="text" dir="rtl">
+            <p>  فترة العرض: 2018.08.21-2018.08.26</p>
+            <p>خلال فترة العرض، عند شحن الكوينز لأول مرة، سوف تربح 100% الكوينز إضافية! </p>
+            <p dir="rtl" class="lt">◆ستصل جائزة الكوينز لحسابك في 2018-08-27.</p>
+            <p dir="rtl" class="lt">◆المستخدمون المستلمون للايميل أو الرسالة القصيرة فقط من لهم حق المشاركة في هذه الفعالية!</p>
+        </div>
+    </div>
+    <div class="content-bottom">
+        <div class="name">قائمة الجائزة</div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>جائزة الكوينز</th>
+                    <th>شحن الرصيد</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>100</td>
+                    <td  dir="rtl">100 كوينز</td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td  dir="rtl">150 كوينز</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td  dir="rtl">500 كوينز</td>
+                </tr>
+                <tr>
+                    <td>1100</td>
+                    <td dir="rtl">1100 كوينز</td>
+                </tr>
+                <tr>
+                    <td>5000</td>
+                    <td  dir="rtl">5000 كوينز</td>
+                </tr>
+                <tr>
+                    <td>11000</td>
+                    <td  dir="rtl">11000 كوينز</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="btn-wrap">
+        <button class="btn"></button>
+    </div>
+</div>
+
+<div class="modal">
+     <div class="end">
+        <button class="ok-btn">OK</button>
+     </div>
+</div>
+
+<script>
+    //    设置rem单位
+    var clientWidth = document.documentElement.clientWidth;
+    if(clientWidth > 640) clientWidth = 640;
+    document.documentElement.style.fontSize = clientWidth / 3.75 + 'px';
+
+    // 创建新元素，用来判断rem单位的计算是否出错
+    var div = document.createElement('div');
+    div.style.width = '1rem';
+    div.style.height = '0';
+    document.body.appendChild(div);
+    var ideal = clientWidth / 3.75; // rem单位计算正确的数值（称为理想数值）
+    var rmd = div.clientWidth / ideal ;// 计算真实的数值与理想rem数值的比例（如果为1，证明是rem单位正确计算了）
+    //  console.log('真实的数值与理想rem数值的比例：',rmd)
+    // 如果两者比例有0.2以上的出入，那就重置rem单位
+    // 囧，发现有些三星手机中，rmd比例稍微大于0.8，看来要修改差距了，换为1.2与0.85
+    if(rmd > 1.1 || rmd < 0.85){
+//    console.log('准备重置rem');
+        document.documentElement.style.fontSize = (clientWidth / 3.75) / rmd + 'px';
+        document.body.removeChild(div);
+//    console.log('新的rem：',document.documentElement.style.fontSize);
+    }
+
+
+</script>
+</body>
+</html>
